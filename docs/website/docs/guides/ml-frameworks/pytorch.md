@@ -20,7 +20,7 @@ icon: simple/pytorch
 
 ## :octicons-book-16: Overview
 
-[SHARK-Turbine](https://github.com/nod-ai/SHARK-Turbine) offers a tight
+[SHARK-Turbine](https://github.com/nod-ai/AMD-SHARK-ModelDev) offers a tight
 integration between compatible versions of IREE,
 [torch-mlir](https://github.com/llvm/torch-mlir), and
 [PyTorch](https://pytorch.org/).
@@ -74,7 +74,7 @@ Just-in-time integration allows for Python code using TorchDynamo to optimize
 PyTorch models/functions using IREE, all within an interactive Python session.
 
 <!-- TODO(scotttodd): mention targets like AMD GPUs when supported
-                      https://github.com/nod-ai/SHARK-Turbine/issues/94 -->
+                      https://github.com/nod-ai/AMD-SHARK-ModelDev/issues/94 -->
 
 ``` mermaid
 graph TD
@@ -143,7 +143,7 @@ turbine_output = opt_linear_module(args)
 | Code samples |  |
 | -- | -- |
 JIT compilation notebook | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/openxla/iree/blob/main/samples/colab/pytorch_jit.ipynb)
-Simple MLP eager | [`examples/eager_mlp/mlp_eager_simple.py`](https://github.com/nod-ai/SHARK-Turbine/blob/main/examples/eager_mlp/mlp_eager_simple.py)
+Simple MLP eager | [`examples/eager_mlp/mlp_eager_simple.py`](https://github.com/nod-ai/AMD-SHARK-ModelDev/blob/main/examples/eager_mlp/mlp_eager_simple.py)
 
 ## :octicons-package-dependents-16: Ahead-of-time (AOT) export
 
@@ -219,7 +219,7 @@ print(result.to_host())
 | Code samples |  |
 | -- | -- |
 Simple AOT export notebook | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/openxla/iree/blob/main/samples/colab/pytorch_aot_simple.ipynb)
-Simple MLP export | [`examples/aot_mlp/mlp_export_simple.py`](https://github.com/nod-ai/SHARK-Turbine/blob/main/examples/aot_mlp/mlp_export_simple.py)
+Simple MLP export | [`examples/aot_mlp/mlp_export_simple.py`](https://github.com/nod-ai/AMD-SHARK-ModelDev/blob/main/examples/aot_mlp/mlp_export_simple.py)
 
 ### :octicons-tools-16: Advanced API
 
@@ -251,11 +251,11 @@ graph LR
 ```
 
 Advanced export workflows can use the
-[`aot.CompiledModule`](https://github.com/nod-ai/SHARK-Turbine/blob/main/python/shark_turbine/aot/compiled_module.py)
+[`aot.CompiledModule`](https://github.com/nod-ai/AMD-SHARK-ModelDev/blob/main/python/shark_turbine/aot/compiled_module.py)
 class to define and constrain the structure of a program prior to compiling it.
 
 <!-- TODO(scotttodd): API reference pages for aot.CompiledModule etc.?
-                      https://github.com/nod-ai/SHARK-Turbine/issues/106
+                      https://github.com/nod-ai/AMD-SHARK-ModelDev/issues/106
 -->
 
 ```python
@@ -400,9 +400,9 @@ their values independently at runtime.
 | -- | -- |
 Advanced AOT export notebook | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/openxla/iree/blob/main/samples/colab/pytorch_aot_advanced.ipynb)
 PyTorch dynamic shapes notebook | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/openxla/iree/blob/main/samples/dynamic_shapes/pytorch_dynamic_shapes.ipynb)
-AOT unit tests | [`tests/aot/`](https://github.com/nod-ai/SHARK-Turbine/tree/main/tests/aot)
-Dynamic MLP export | [`examples/aot_mlp/mlp_export_dynamic.py`](https://github.com/nod-ai/SHARK-Turbine/blob/main/examples/aot_mlp/mlp_export_dynamic.py)
-stateless llama2 | [`python/turbine_models/custom_models/stateless_llama.py`](https://github.com/nod-ai/SHARK-Turbine/blob/main/python/turbine_models/custom_models/stateless_llama.py)
+AOT unit tests | [`tests/aot/`](https://github.com/nod-ai/AMD-SHARK-ModelDev/tree/main/tests/aot)
+Dynamic MLP export | [`examples/aot_mlp/mlp_export_dynamic.py`](https://github.com/nod-ai/AMD-SHARK-ModelDev/blob/main/examples/aot_mlp/mlp_export_dynamic.py)
+stateless llama2 | [`python/turbine_models/custom_models/stateless_llama.py`](https://github.com/nod-ai/AMD-SHARK-ModelDev/blob/main/python/turbine_models/custom_models/stateless_llama.py)
 
 ## Alternate workflows
 
