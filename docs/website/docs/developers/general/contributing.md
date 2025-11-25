@@ -130,7 +130,7 @@ join any of the teams on <https://github.com/orgs/openxla/teams>.
 
     Work on IREE sometimes spans other GitHub organizations like
     [iree-org](https://github.com/iree-org) and
-    [shark-infra](https://github.com/shark-infra/). Reach out to a project
+    [amd-shark-infra](https://github.com/amd-shark-infra/). Reach out to a project
     member if you would also like access to repositories in those organizations.
 
 ### :octicons-people-16: Credits in the AUTHORS file

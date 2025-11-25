@@ -322,7 +322,7 @@ def query_available_targets():
     return target_backends
 
 
-# Preprocessing for SHARK (for now simply exposes iree-opt)
+# Preprocessing for AMD-SHARK (for now simply exposes iree-opt)
 
 
 def build_opt_command_line(

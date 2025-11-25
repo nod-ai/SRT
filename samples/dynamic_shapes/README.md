@@ -27,7 +27,7 @@ dynamic shapes:
 
 ```python
 import torch
-import shark_turbine.aot as aot
+import amd_shark_turbine.aot as aot
 
 class DynamicShapesModule(aot.CompiledModule, export_name="module"):
   # reduce_sum_1d (dynamic input size, static output size)

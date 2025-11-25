@@ -21,7 +21,7 @@ jobs:
       - name: Setup git
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "SHARK bot"
+          git config --local user.name "AMD-SHARK bot"
 
       - name: Update main upstream
         run: |
@@ -36,8 +36,8 @@ jobs:
           branch: main
           repository: nod-ai/SRT
 
-  rebase_shark:
-    name: 'Rebase SHARK'
+  rebase_amd_shark:
+    name: 'Rebase AMD-SHARK'
     runs-on: ubuntu-latest
     steps:
       - name: Checking out repository
@@ -45,15 +45,15 @@ jobs:
         with:
           token: ${{ secrets.CI_WRITE_TOKEN }}
           repository: nod-ai/SRT
-          ref: shark
+          ref: amd-shark
           fetch-depth: 0
 
       - name: Setup git
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "SHARK bot"
+          git config --local user.name "AMD-SHARK bot"
 
-      - name: Update shark upstream
+      - name: Update amd-shark upstream
         run: |
           set -ex
           git remote add upstream https://github.com/iree-org/iree

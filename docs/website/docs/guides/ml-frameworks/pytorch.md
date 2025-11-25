@@ -20,7 +20,7 @@ icon: simple/pytorch
 
 ## :octicons-book-16: Overview
 
-[SHARK-Turbine](https://github.com/nod-ai/AMD-SHARK-ModelDev) offers a tight
+[AMD-SHARK-Turbine](https://github.com/nod-ai/AMD-SHARK-ModelDev) offers a tight
 integration between compatible versions of IREE,
 [torch-mlir](https://github.com/llvm/torch-mlir), and
 [PyTorch](https://pytorch.org/).
@@ -36,14 +36,14 @@ graph LR
   accTitle: PyTorch integration overview
   accDescr {
     PyTorch programs can be optimized within a Python session with
-    SHARK-Turbine's just-in-time tools.
+    AMD-SHARK-Turbine's just-in-time tools.
     PyTorch programs can be exported out of Python to native binaries using
-    SHARK-Turbine's ahead-of-time export toolkit.
+    AMD-SHARK-Turbine's ahead-of-time export toolkit.
   }
 
   subgraph Python
     pytorch(PyTorch)
-    subgraph turbine [SHARK-Turbine]
+    subgraph turbine [AMD-SHARK-Turbine]
       jit("Eager execution (JIT)")
       aot("Export toolkit (AOT)")
     end
@@ -65,7 +65,7 @@ graph LR
 Install Turbine and its requirements:
 
 ``` shell
-python -m pip install shark-turbine
+python -m pip install amd-shark-turbine
 ```
 
 ## :octicons-flame-16: Just-in-time (JIT) execution
@@ -91,7 +91,7 @@ graph TD
     subgraph compile ["torch.compile()"]
       direction LR
       dynamo{{TorchDynamo}}
-      turbine{{SHARK-Turbine}}
+      turbine{{AMD-SHARK-Turbine}}
       iree{{IREE}}
       dynamo --> turbine --> iree
     end
@@ -181,7 +181,7 @@ graph LR
 ```python
 import iree.runtime as ireert
 import numpy as np
-import shark_turbine.aot as aot
+import amd_shark_turbine.aot as aot
 import torch
 
 # Define the `nn.Module` to export.
@@ -251,7 +251,7 @@ graph LR
 ```
 
 Advanced export workflows can use the
-[`aot.CompiledModule`](https://github.com/nod-ai/AMD-SHARK-ModelDev/blob/main/python/shark_turbine/aot/compiled_module.py)
+[`aot.CompiledModule`](https://github.com/nod-ai/AMD-SHARK-ModelDev/blob/main/python/amd_shark_turbine/aot/compiled_module.py)
 class to define and constrain the structure of a program prior to compiling it.
 
 <!-- TODO(scotttodd): API reference pages for aot.CompiledModule etc.?
@@ -259,7 +259,7 @@ class to define and constrain the structure of a program prior to compiling it.
 -->
 
 ```python
-import shark_turbine.aot as aot
+import amd_shark_turbine.aot as aot
 
 # A minimal program, with no functions or variables.
 class BasicModule(aot.CompiledModule):
@@ -406,7 +406,7 @@ stateless llama2 | [`python/turbine_models/custom_models/stateless_llama.py`](ht
 
 ## Alternate workflows
 
-!!! caution "Caution - These are due for migration to SHARK-Turbine."
+!!! caution "Caution - These are due for migration to AMD-SHARK-Turbine."
 
 | Code samples |  |
 | -- | -- |

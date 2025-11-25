@@ -19,7 +19,7 @@ NOTEBOOKS_TO_SKIP = [
     # tflite_runtime requires some deps ("version `GLIBC_2.29' not found") that
     # samples.Dockerfile does not currently include.
     "tflite_text_classification.ipynb",
-    # PyTorch notebooks using SHARK-Turbine require Python 3.10+ in Docker.
+    # PyTorch notebooks using AMD-SHARK-Turbine require Python 3.10+ in Docker.
     "pytorch_aot_advanced.ipynb",
     "pytorch_aot_simple.ipynb",
     "pytorch_jit.ipynb",
