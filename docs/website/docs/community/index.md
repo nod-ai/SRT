@@ -2,7 +2,7 @@
 
 Projects built by community members:
 
-* The [SHARK](https://github.com/nod-ai/AMD-SHARK-Studio) project from
+* The [AMDSHARK](https://github.com/nod-ai/AMD-SHARK-Studio) project from
   [nod.ai](https://nod.ai/) uses a forked version of IREE
   ([AMD-SHARK-Runtime](https://github.com/nod-ai/SRT)), offering
   highly tuned performance on a large corpus of machine learning programs.

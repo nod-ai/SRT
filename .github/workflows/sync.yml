@@ -64,6 +64,6 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.CI_WRITE_TOKEN }}
-          branch: shark
+          branch: amd-shark
           repository: nod-ai/SRT
           force_with_lease: true
